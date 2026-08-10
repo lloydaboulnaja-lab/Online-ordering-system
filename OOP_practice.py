@@ -45,6 +45,8 @@ def get_details():
 
         elif drink_no == 1:
             pass
+        elif drink_no == 2:
+            pass
         else:
             break
        
