@@ -1,3 +1,17 @@
+drinks_menu = {
+    "1. Flat White": 3.40,
+    "2. Filter Coffee": 2.80,
+    "3. Iced Caramel Latte": 4.30,
+    "4. Cold Brew": 3.50,
+    "5. Hot Chocolate": 3.85,
+    "6. Chai Latte": 3.90,
+    "7. Matcha Latte": 4.20,
+    "8. English Breakfast Tea": 2.60,
+    "9. Peach Iced Tea": 3.75,
+    "10. Coffee Frappé": 4.50
+}
+
+
 class Cart_item:
     def __init__(self,model,):
         self.model = model
@@ -44,11 +58,7 @@ def get_details():
             print("Your drink number is out of range!")
 
         elif drink_no == 1:
-            pass
-        elif drink_no == 2:
-            pass
-        else:
-            break
+            print("Drink 1 has been added!")
        
         
         
@@ -64,7 +74,6 @@ Shop = Cart("Lloyds Coffee",[])
 def view_cart():
     
     print(f"\n{Shop.shopping_cart_items()}")
-
 
 
 
@@ -88,21 +97,8 @@ def remove_items():
                 break
     
 
-
-
 def drink_menu():
-    drinks_menu = {
-    "1. Flat White": 3.40,
-    "2. Filter Coffee": 2.80,
-    "3. Iced Caramel Latte": 4.30,
-    "4. Cold Brew": 3.50,
-    "5. Hot Chocolate": 3.85,
-    "6. Chai Latte": 3.90,
-    "7. Matcha Latte": 4.20,
-    "8. English Breakfast Tea": 2.60,
-    "9. Peach Iced Tea": 3.75,
-    "10. Coffee Frappé": 4.50
-}
+   
     print(f"Welcome to {Shop.store}!")
 
     print("="* 30)
@@ -114,8 +110,6 @@ def drink_menu():
 
     get_details()
         
-
-    
 
 def main():
     flag = True
@@ -161,10 +155,7 @@ def main():
         else:
             break
 
-      
-
-
-
+    
 
 if __name__ == "__main__":
     main()
