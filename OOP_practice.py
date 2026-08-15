@@ -4,7 +4,6 @@ class Drink:
         self.name = name
         self.price = price
 
-
         def get_name(self):
             return self.name
 
@@ -29,15 +28,12 @@ class Cart:
         pay = input("Press the [ENTER] button on the keybaord to pay: ")
         print("Payment went through succesfully!")
         
-
-
 cola = Drink("Coca Cola", 1.25)
 fanta = Drink("Fanta", 1.20)
 sprite = Drink("Sprite", 1.39)
 drinks_cart = Cart([],[])
 
 flag = True
-
 
 print("1. Coca-Cola")
 print("2. Fanta")
