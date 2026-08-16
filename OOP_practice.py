@@ -38,12 +38,13 @@ drinks_cart = Cart([],[])
 
 flag = True
 
-
+print("="*20)
 print("1. Coca-Cola")
 print("2. Fanta")
 print("3. Sprite")
 print("4. View drink cart")
 print("5. Checkout")
+print("="*20)
 
 while flag:
 
@@ -52,11 +53,12 @@ while flag:
     except ValueError:
         print("Invalid value!")
         continue
+
     if choice not in [1,2,3,4,5]:
         print("Invalid choice!. Try again")
 
     elif choice == 1:
-
+        
         print(f"{cola.name} has been added to the cart!. It costs ${cola.price}!")
         drinks_cart.items.append(cola.name)
         drinks_cart.cost.append(cola.price)
@@ -80,15 +82,15 @@ while flag:
 
     elif choice == 5:
         if len(drinks_cart.items) < 1:
-            print("You dont have any drinks in your cart!")
+            print("You dont have any drinks in your cart!. Add at least one to checkout.")
             continue
-    
         else:
             drinks_cart.get_total()
 
             after_choice = input("\nDo you wish to \n  1. Continue \n  2. Exit: ")
 
             if after_choice == 2:
-                quit()     
+                break
+                quit()
             else:
                 continue
