@@ -4,12 +4,12 @@ class Drink:
         self.name = name
         self.price = price
 
+
         def get_name(self):
             return self.name
 
         def get_price(self):
             return self.price
-
 
 class Cart:
 
@@ -28,6 +28,8 @@ class Cart:
         pay = input("Press the [ENTER] button on the keybaord to pay: ")
         print("Payment went through succesfully!")
         
+
+
 cola = Drink("Coca Cola", 1.25)
 fanta = Drink("Fanta", 1.20)
 sprite = Drink("Sprite", 1.39)
@@ -73,21 +75,21 @@ while flag:
     elif choice == 4:
         if len(drinks_cart.items) < 1:
             print("You dont have any drinks in your cart!")
-            continue
+            
         else:
             drinks_cart.return_items()
 
     elif choice == 5:
         if len(drinks_cart.items) < 1:
             print("You dont have any drinks in your cart!. Add at least one to checkout.")
-            continue
+
         else:
             drinks_cart.get_total()
 
-            after_choice = input("\nDo you wish to \n  1. Continue \n  2. Exit: ")
+            after_choice = int(input("\nDo you wish to \n  1. Continue \n  2. Exit: "))
 
             if after_choice == 2:
                 break
-                quit()
             else:
                 continue
+        
